@@ -20,11 +20,16 @@ public class Basic {
         // System.out.println(list.get(3));
 
         // Remove operation
-        int element = list.remove(4);
-        System.out.println(list);
-        // set(change) element at index
-        list.set(0,5);
-        System.out.println(list);
+        // int element = list.remove(4);
+        // System.out.println(list);
+        // // set(change) element at index
+        // list.set(0,5);
+        // System.out.println(list);
+  
+  
+        //search operation
+        System.out.println(list.contains(5));
+        System.out.println(list.contains(0));
     }
 
 
