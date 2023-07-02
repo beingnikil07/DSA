@@ -47,6 +47,19 @@ public class MyHashMapImplementation {
             initBuckets(DEFAULT_CAPACITY);
         }
 
+        // rehash
+        private void rehash() {
+            LinkedList<Node>[] oldBuckets = buckets;
+            initBuckets(oldBuckets.length * 2);
+            n = 0;
+            for (var bucket : oldBuckets) {
+                for (var node : bucket) {
+                    put(node.key, node.value);
+
+                }
+            }
+        }
+
         // size method which returns the number of entries in map
         public int size() {
             return n;
@@ -64,6 +77,12 @@ public class MyHashMapImplementation {
             } else { // update case
                 Node curNode = currBucket.get(ei);
                 curNode.value = value;
+            }
+
+            if (n >= buckets.length * DEFAULT_LOAD_FACTOR)
+                ;
+            {
+                rehash();
             }
         }
 
@@ -110,13 +129,11 @@ public class MyHashMapImplementation {
         System.out.println(mp.get("a"));
         System.out.println(mp.get("b"));
         System.out.println(mp.get("c"));
-        System.out.println(mp.get("nik")); //null
-        //testing remove
-        System.out.println(mp.remove("c")); //30
-        System.out.println(mp.remove("c")); //null
-        System.out.println("testing size:"+mp.size());
-
-
+        System.out.println(mp.get("nik")); // null
+        // testing remove
+        System.out.println(mp.remove("c")); // 30
+        System.out.println(mp.remove("c")); // null
+        System.out.println("testing size:" + mp.size());
 
     }
 }
