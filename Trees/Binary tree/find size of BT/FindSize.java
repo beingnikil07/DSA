@@ -1,4 +1,5 @@
 public class FindSize {
+    public static int size=0;
     public static class Node {
         int val; // initially it points to zero
         Node left; // initially points to null
@@ -12,7 +13,8 @@ public class FindSize {
     //Traversal preorder
     public static void preorder(Node root){
             if(root==null) return;
-            System.out.println(root.val+" ");
+            //System.out.println(root.val+" ");
+            size++;
             preorder(root.left);
             preorder(root.right);
     }
@@ -30,5 +32,6 @@ public class FindSize {
         Node e = new Node(6);
         b.right = e;
         preorder(root);
+        System.out.println(size);
     }
 }
