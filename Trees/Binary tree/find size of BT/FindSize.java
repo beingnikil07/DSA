@@ -9,7 +9,7 @@ public class FindSize {
             this.val = val;
         }
     }
-    //Traversal 
+    //Traversal preorder
     public static void preorder(Node root){
             if(root==null) return;
             System.out.println(root.val+" ");
