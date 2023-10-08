@@ -34,6 +34,15 @@ public class Traversal {
         inOrder(root.right);
     }
 
+    public static void nthLevelPrint(Node root, int n) {
+        if (root == null)
+            return;
+        if (n == 1)
+            System.out.print(root.val + " ");
+        nthLevelPrint(root.left,n-1);
+        nthLevelPrint(root.right,n-1);
+    }
+
     public static void main(String[] args) {
         Node root = new Node(1);
         Node a = new Node(2);
@@ -53,5 +62,7 @@ public class Traversal {
         inOrder(root);
         System.out.println();
         postOrder(root);
+        System.out.println();
+        nthLevelPrint(root, 2);   // level 2 print honi chahiye 2,3
     }
 }
