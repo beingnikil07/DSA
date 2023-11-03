@@ -3,7 +3,6 @@ import java.util.ArrayList;
 public class Insertion {
     static class Heap {
         ArrayList<Integer> arr = new ArrayList<>();
-
         public void add(int data) {
             // add at last index
             arr.add(data);
@@ -24,6 +23,6 @@ public class Insertion {
         return arr.get(0);
     }
     public static void main(String[] args) {
-        
+
     }
 }
