@@ -8,7 +8,7 @@ Exercises: Practice problems and coding challenges to test and enhance your unde
 
 Getting Started
 
-Clone the repository: git clone https://github.com/yourusername/java-learning.git
+Clone the repository: git clone https://github.com/beingnikil07/DSA.git
 
 Contributions
 
